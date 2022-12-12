@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>SIGNUP PAGE</title>
+        <script src="https://kit.fontawesome.com/c21410e9fb.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/signup.css">
+        <script>
+            function myFunction() {
+              var x = document.getElementById("passwrd");
+              if (x.type === "password") {
+                x.type = "text";
+              }
+              else {
+                x.type = "password";
+              } 
+            }
+        </script>
+    </head>
+    <body>
+        <div class="navbar"><div class="float">event registration</div>
+        <ul>
+            <li><a href="/NSP project/index.html">Home</a></li>
+            <li><a href="/NSP project/about.html">About us</a></li>
+            <li><a href="/NSP project/home.html#snapshot">SnapShots</a></li>
+            <li><a href="/NSP project/create-event.html">Create an event</a></li>
+            <li><a href="/NSP project/home.html#contact">Contact us</a></li>
+            <li><a href="/NSP project/loginpage.html">Login</a></li>
+            <li><a class="active" href="/NSP project/signup.html">Signup</a></li>
+        </ul>
+        </div>
+        <div class="container">
+            <form action="/NSP project/loginpage.html" onsubmit="if(document.getElementById('agree').checked) { return true; }
+             else { alert('Please indicate that you have read and agree to the Terms and Conditions.'); 
+             return false; }">
+
+            <br>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label>Username:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" placeholder="Username" name="username" required >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" placeholder="Email address" name="email" required >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label style="color:rgb(214, 122, 122);">Create a password:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" placeholder="Password" name="password" id="passwrd" required >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <h3 style="color:rgb(214, 122, 122);"><input type="checkbox" onclick="myFunction()">Show password</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <h3 style="color:rgb(214, 122, 122);"><input type="checkbox" id="agree">I Agree to the <a href="/NSP project/terms.html">Terms & conditions</a></h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" id="submit">Register</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        </div>
+        
+    </body>
+</html>
